@@ -1,0 +1,61 @@
+header.header{padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;}.mainslider{padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;}h2.site-description-compiler{font-family:Abel;line-height:40px;font-weight:normal;font-style:700;color:#333;font-size:33px;opacity: 1;visibility: visible;-webkit-transition: opacity 0.24s ease-in-out;-moz-transition: opacity 0.24s ease-in-out;transition: opacity 0.24s ease-in-out;}.wf-loading h2.site-description-compiler,{opacity: 0;}.ie.wf-loading h2.site-description-compiler,{visibility: hidden;}.mainslider .slick-list {
+            -webkit-border-top-left-radius: 0;
+            -webkit-border-top-right-radius: 0;
+            -webkit-border-bottom-right-radius: 0;
+            -webkit-border-bottom-left-radius: 0;
+            -moz-border-radius-topleft: 0;
+            -moz-border-radius-topright: 0;
+            -moz-border-radius-bottomright: 0;
+            -moz-border-radius-bottomleft: 0;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    .main-menu-bar, .main-menu-bar .top-bar {
+            -webkit-border-top-left-radius: 0;
+            -webkit-border-top-right-radius: 0;
+            -webkit-border-bottom-right-radius: 0;
+            -webkit-border-bottom-left-radius: 0;
+            -moz-border-radius-topleft: 0;
+            -moz-border-radius-topright: 0;
+            -moz-border-radius-bottomright: 0;
+            -moz-border-radius-bottomleft: 0;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    
+
+    .row, .contain-to-grid .top-bar, .reveal-modal, .reveal-modal.tiny, .reveal-modal.small, .reveal-modal.medium, .reveal-modal.large, .reveal-modal.xlarge, .reveal-modal.full {
+        max-width: 1200px;
+    }
+    
+    .top-bar-section li.active:not(.has-form) a:not(.button){
+        color: #7B88CC;
+    }
+    .top-bar-section ul li:hover:not(.has-form) > a, .top-bar-section li.active:not(.has-form) a:not(.button):hover {
+        color: #ffffff;
+    }
+
+    .top-bar-section ul li > a {
+        color: #ffffff;
+    }
+
+    .main-menu-bar .top-bar, .top-bar ul {
+        background-color: #444444;
+    }
+
+    .main-menu-bar .top-bar {
+        height: 52px;
+    }
+
+    .top-bar li a {
+        font-size: 14px;
+    }
+    
+
+    
+    
+    
