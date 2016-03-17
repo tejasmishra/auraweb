@@ -1,18 +1,18 @@
 <?php
 
 /**
- * Adds TwoColImgTxt widget.
+ * Adds ImageWidget widget.
  */
-class TwoColImgTxt extends WP_Widget {
+class ImageWidget extends WP_Widget {
 
 	/**
 	 * Register widget with WordPress.
 	 */
 	function __construct() {
 		parent::__construct(
-			'TwoColImgTxt', // Base ID
-			__( 'Two Col Image Text', 'auraweb' ), // Name
-			array( 'description' => __( 'A Foo Widget', 'auraweb' ), ) // Args
+			'ImageWidget', // Base ID
+			__( 'Image Upload', 'auraweb' ), // Name
+			array( 'description' => __( 'Image Upload', 'auraweb' ), ) // Args
 		);
 	}
 
@@ -28,30 +28,12 @@ class TwoColImgTxt extends WP_Widget {
 		echo $args['before_widget'];
 		
 		?>
-		<div class="image-text-widget">
-			<div class="row">
-				<div class="columns large-6">
-						<?php if ( ! empty( $instance['upload_image'] ) ) { ?>		
-							<img src="<?php echo $instance['upload_image'] ?>" alt="" style="max-width:600px; width:100%; ">
-							<?php
-						} ?>	
-				</div>
-				<div class="columns large-6">
-					<?php
-						if ( ! empty( $instance['title'] ) ) {
-							echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ). $args['after_title'];
-						}
-					?>
-					<p>
-						<?php
-							if ( ! empty( $instance['description'] ) ) {
-								echo $instance['description'];
-							}
-						?>
-					</p>
-
-				</div>
-			</div>
+		<div class="image-widget">
+			<?php if ( ! empty( $instance['upload_image'] ) ) { ?>		
+				<img src="<?php echo $instance['upload_image'] ?>" alt="" style="max-width:600px; width:100%; ">
+				<?php
+			} ?>	
+				
 		</div>
 			
 
@@ -75,21 +57,14 @@ class TwoColImgTxt extends WP_Widget {
 		$description = ! empty( $instance['description'] ) ? $instance['description'] : __( '', 'auraweb' );
 		?>
 		<p>
-		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
-		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
 		<p>
-			
 			<label for="<?php echo $this->get_field_id( 'upload_image' ); ?>"><?php _e( 'Image:' ); ?></label>
-
 			<span style="background-color:#999; padding:10px; display:block; float:left;"><img src="<?php echo esc_attr( $upload_image ); ?>" alt="" style="max-width:300px; width:100%; float:left;"></span>
-			
 			<input id="<?php echo $this->get_field_id( 'upload_image' ); ?>" type="text" size="36" name="<?php echo $this->get_field_name( 'upload_image' ); ?>" value="<?php echo esc_attr( $upload_image ); ?>" />
 			<!-- <input id="upload_image_button" type="button" value="Upload Image" /> -->
-		</p>
-		<p>
-		<label for="<?php echo $this->get_field_id( 'description' ); ?>"><?php _e( 'Description:' ); ?></label> 
-		<textarea class="widefat" id="<?php echo $this->get_field_id( 'description' ); ?>" name="<?php echo $this->get_field_name( 'description' ); ?>"><?php echo esc_attr( $description ); ?></textarea>
 		</p>
 		<?php 
 	}
@@ -108,33 +83,25 @@ class TwoColImgTxt extends WP_Widget {
 		$instance = array();
 		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
 		$instance['upload_image'] = ( ! empty( $new_instance['upload_image'] ) ) ? $new_instance['upload_image'] : '';
-		$instance['description'] = ( ! empty( $new_instance['description'] ) ) ? strip_tags( $new_instance['description'] ) : '';
 
 		return $instance;
 	}
 
-} // class TwoColImgTxt
+} // class ImageWidget
 
 
-
-// register TwoColImgTxt widget
-function register_TwoColImgTxt() {
-    register_widget( 'TwoColImgTxt' );
-    add_action('admin_enqueue_scripts', 'TwoColImgTxt_admin_scripts');
+// register ImageWidget widget
+function register_ImageWidget() {
+    register_widget( 'ImageWidget' );
+    add_action('admin_enqueue_scripts', 'imageUpload_admin_scripts');
 }
-add_action( 'widgets_init', 'register_TwoColImgTxt' );
+add_action( 'widgets_init', 'register_ImageWidget' );
 
 
-function TwoColImgTxt_admin_scripts() {
+function imageUpload_admin_scripts() {
 	wp_enqueue_media();
-	wp_register_script('TwoColImgTxt-upload', get_template_directory_uri() . '/assets/functions/widgets/js/twoColImgTxt-widget.js', array('jquery'));
-	wp_enqueue_script('TwoColImgTxt-upload');
+	wp_register_script('imageUpload-upload', get_template_directory_uri() . '/assets/functions/widgets/js/image-widget.js', array('jquery','media-upload','thickbox'));
+	wp_enqueue_script('imageUpload-upload');
 }
-
-
-
-// if (isset($_GET['page']) && $_GET['page'] == 'widget.php') {
-	
-// }
 
 ?>

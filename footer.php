@@ -1,6 +1,11 @@
 					<footer class="footer" role="contentinfo">
 						<div id="inner-footer" class="row">
 							<div class="large-12 medium-12 columns">
+								<?php if ( is_active_sidebar( 'footer_content' ) ) : ?>
+									<div id="footer-content" class="footer-content">
+										<?php dynamic_sidebar( 'footer_content' ); ?>
+									</div><!-- #middle-bar-right-sidebar -->
+								<?php endif; ?>
 								<nav role="navigation">
 		    						<?php joints_footer_links(); ?>
 		    					</nav>

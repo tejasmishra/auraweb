@@ -52,13 +52,13 @@ class LatestRecentPost extends WP_Widget {
 			$recent_posts = wp_get_recent_posts( $args );
 			foreach( $recent_posts as $recent ){
 				echo '<h2>'. ( __($recent["post_title"])) .'</h2>';
-				print_r($recent_posts);
+				// print_r($recent_posts);
 				$recent_author = get_user_by( 'ID', $recent["post_author"] );
 				echo $recent_author->display_name . ' wrote on ' . mysql2date('j M Y', $recent["post_date"]) ;
 				echo '<p>';
 				echo ( __($recent["post_content"]));					
 				echo '</p>';
-				echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   ( __($recent["post_title"])).'</a> </li> ';
+				// echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   ( __($recent["post_title"])).'</a> </li> ';
 			}
 		?>
 

@@ -1,8 +1,8 @@
 jQuery(document).ready(function($) {
 
     var custom_uploader; 
-
-	$('#widget-twocolimgtxt-2-upload_image').click(function(e) {
+    
+	$('#widget-imagewidget-2-upload_image').click(function(e) {
  
         e.preventDefault();
  
@@ -24,7 +24,7 @@ jQuery(document).ready(function($) {
         //When a file is selected, grab the URL and set it as the text field's value
         custom_uploader.on('select', function() {
             attachment = custom_uploader.state().get('selection').first().toJSON();
-            $('#widget-twocolimgtxt-2-upload_image').val(attachment.url);
+            $('#widget-imagewidget-2-upload_image').val(attachment.url);
         });
  
         //Open the uploader dialog
