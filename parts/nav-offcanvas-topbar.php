@@ -12,6 +12,13 @@
 	$menu_box_shadow, 
 	$slider_position,	
 	$is_menu;
+
+	$classes = get_body_class();
+	if (in_array('post-type-archive-apps', $classes) || in_array('tax-appscat', $classes) || in_array('single-apps', $classes) ) {
+	    $apps_page = true;
+	} else {
+	    $apps_page = false;
+	}
 ?>
 
 
@@ -46,7 +53,17 @@
 				</div>
 			<?php endif; ?>
 			<section class="top-bar-section <?php if ( $logo_location == 'besidesMenu') { echo 'float-right'; } ?>">
-				<?php joints_top_nav(); ?>
+				
+				<?php
+					if (!$apps_page)  {
+						joints_top_nav();
+					}
+				?>
+				<?php
+					if ( $apps_page)  {
+						joints_top_nav_apps();
+					}
+				?>
 			</section>
 			<?php if ( is_active_sidebar( 'menu_bar_right_section' ) ) : ?>
 				<div id="menu-bar-right-sidebar" class="menu-bar-right-sidebar widget-area" role="complementary">

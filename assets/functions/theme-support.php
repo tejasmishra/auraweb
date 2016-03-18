@@ -45,3 +45,5 @@ function joints_theme_support() {
 } /* end theme support */
 
 add_action( 'after_setup_theme', 'joints_theme_support' );
+
+

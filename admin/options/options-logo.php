@@ -14,6 +14,13 @@ Redux::setSection( $opt_name, array(
             'subtitle' => __( 'Upload any logo using the WordPress native uploader', 'origin-theme' ),
         ),
         array(
+            'id'       => 'media-logo-for-apps',
+            'type'     => 'media',
+            'title'    => __( 'Logo for Apps Page', 'origin-theme' ),
+            'desc'     => __( 'This is logo for Apps page.', 'origin-theme' ),
+            'subtitle' => __( 'Upload any logo using the WordPress native uploader', 'origin-theme' ),
+        ),
+        array(
             'id'        =>  'opt-radio-logo-posotion',
             'type'      =>  'radio',
             'title'     =>  __( 'Logo Position', 'origin-theme'),

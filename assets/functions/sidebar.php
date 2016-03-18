@@ -87,6 +87,15 @@ function joints_register_sidebars() {
 		'after_title'   => '</h2>',
 	) );
 
+	register_sidebar( array(
+		'name'          => 'Apps Page Sidebar',
+		'id'            => 'apps_page_sidebar',
+		'before_widget' => '<div class="apps_page_sidebar_content">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="rounded">',
+		'after_title'   => '</h2>',
+	) );
+
 	/*
 	to add more sidebars or widgetized areas, just copy
 	and edit the above sidebar code. In order to call

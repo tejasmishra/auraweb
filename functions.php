@@ -40,6 +40,7 @@ require_once(get_template_directory().'/assets/translation/translation.php');
 
 // Use this as a template for custom post types
 // require_once(get_template_directory().'/assets/functions/custom-post-type.php');
+require_once(get_template_directory().'/assets/functions/custom-post-type-apps.php');
 
 // Customize the WordPress login menu
 // require_once(get_template_directory().'/assets/functions/login.php'); 
@@ -50,19 +51,20 @@ require_once(get_template_directory().'/assets/translation/translation.php');
 // Adds customizer support
 
 
-	global $origin_theme, $slider_enabled, $is_logo_set, $topbar_menu_pos, $slider_position, $site_layout, $is_menu, $logo_location, $menubar_width, $topbar_menu, $menu_box_shadow, $site_sections;
+	global $origin_theme, $slider_enabled, $is_logo_set, $is_logo_set_for_apps, $topbar_menu_pos, $slider_position, $site_layout, $is_menu, $logo_location, $menubar_width, $topbar_menu, $menu_box_shadow, $site_sections;
 		
-	$origin_theme 		=	get_option( 'origin_theme' );
-	$slider_enabled 	=	$origin_theme['switch-parent-slider'];
-	$is_logo_set 		=	$origin_theme['media-logo']['url'] != '' ? true : false;
-	$topbar_menu_pos	=	$origin_theme['opt-radio-topbar-menu-location'];
-	$slider_position 	= 	$origin_theme['opt-main-slider-position'];
-	$site_layout		= 	$origin_theme['switch-site-layout'];
-	$is_menu			= 	$origin_theme['switch-menubar'];
-	$logo_location		=	$origin_theme['opt-radio-logo-posotion'];
-	$menubar_width		=	$origin_theme['opt-radio-menubar-width'];
-	$topbar_menu		=	$origin_theme['switch-topbar-menu'];
-	$menu_box_shadow	=	$origin_theme['opt-select-menu-box-shadow-effect'];
-	$site_sections		=	$origin_theme['opt-layout-sections'];
+	$origin_theme 			=	get_option( 'origin_theme' );
+	$slider_enabled 		=	$origin_theme['switch-parent-slider'];
+	$is_logo_set 			=	$origin_theme['media-logo']['url'] != '' ? true : false;
+	$is_logo_set_for_apps 	=	$origin_theme['media-logo-for-apps']['url'] != '' ? true : false;
+	$topbar_menu_pos		=	$origin_theme['opt-radio-topbar-menu-location'];
+	$slider_position 		= 	$origin_theme['opt-main-slider-position'];
+	$site_layout			= 	$origin_theme['switch-site-layout'];
+	$is_menu				= 	$origin_theme['switch-menubar'];
+	$logo_location			=	$origin_theme['opt-radio-logo-posotion'];
+	$menubar_width			=	$origin_theme['opt-radio-menubar-width'];
+	$topbar_menu			=	$origin_theme['switch-topbar-menu'];
+	$menu_box_shadow		=	$origin_theme['opt-select-menu-box-shadow-effect'];
+	$site_sections			=	$origin_theme['opt-layout-sections'];
 	
 	

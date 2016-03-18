@@ -3,7 +3,8 @@
 register_nav_menus(
 	array(
 		'main-nav' => __( 'The Main Menu', 'auraweb' ),   // Main nav in header
-		'footer-links' => __( 'Footer Links', 'auraweb' ) // Secondary nav in footer
+		'footer-links' => __( 'Footer Links', 'auraweb' ), // Secondary nav in footer
+        'main-nav-apps' => __( 'The Main Menu for Apps', 'auraweb' ),   // Main nav in header
 	)
 );
 
@@ -14,6 +15,17 @@ function joints_top_nav() {
         'menu_class' => 'vertical medium-horizontal menu',       // Adding custom nav class
         'items_wrap' => '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion medium-dropdown">%3$s</ul>',
         'theme_location' => 'main-nav',        			// Where it's located in the theme
+        'depth' => 5,                                   // Limit the depth of the nav
+        'fallback_cb' => false,                         // Fallback function (see below)
+        'walker' => new Topbar_Menu_Walker()
+    ));
+} 
+function joints_top_nav_apps() {
+     wp_nav_menu(array(
+        'container' => false,                           // Remove nav container
+        'menu_class' => 'vertical medium-horizontal menu',       // Adding custom nav class
+        'items_wrap' => '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion medium-dropdown">%3$s</ul>',
+        'theme_location' => 'main-nav-apps',                 // Where it's located in the theme
         'depth' => 5,                                   // Limit the depth of the nav
         'fallback_cb' => false,                         // Fallback function (see below)
         'walker' => new Topbar_Menu_Walker()

@@ -947,3 +947,10 @@ HOMEPAGE STYLES
 		}
 	}
 }
+
+
+main {
+	&.column, &.columns{
+		float: right;
+	}
+}
