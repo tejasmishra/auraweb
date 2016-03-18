@@ -8,10 +8,17 @@
 	<header class="article-header">
 		<h3 class="title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>	
 		<?php 
-			echo get_field( "app_section" ); 
-			echo get_field( "star_rating" ); 
+			echo get_field( "app_section" );  
 			$fields = get_fields();
-			print_r( $fields ); 
+			if (in_array("Augmented Reality", $fields['aura_app_badges'])) {
+			    echo '<img src="'. get_template_directory_uri() .'/assets/images/badges/as.png">';
+			}
+			if (in_array("Virtual Reality", $fields['aura_app_badges'])) {
+			    echo '<img src="'. get_template_directory_uri() .'/assets/images/badges/vrenabled-40x40.png">';
+			}
+			if (in_array("Play Store", $fields['aura_app_badges'])) {
+			    echo '<img src="'. get_template_directory_uri() .'/assets/images/badges/available-on-playstore-40x40.png">';
+			}
 		?>
 						
 		<?php //get_template_part( 'parts/content', 'byline' ); ?>				
