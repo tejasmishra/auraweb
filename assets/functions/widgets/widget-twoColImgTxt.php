@@ -82,9 +82,9 @@ class TwoColImgTxt extends WP_Widget {
 			
 			<label for="<?php echo $this->get_field_id( 'upload_image' ); ?>"><?php _e( 'Image:' ); ?></label>
 
-			<span style="background-color:#999; padding:10px; display:block; float:left;"><img src="<?php echo esc_attr( $upload_image ); ?>" alt="" style="max-width:300px; width:100%; float:left;"></span>
+			<span class="spanClass" style="background-color:#999; padding:10px; display:block; float:left;"><img src="<?php echo esc_attr( $upload_image ); ?>" alt="" style="max-width:300px; width:100%; float:left;"></span>
 			
-			<input id="<?php echo $this->get_field_id( 'upload_image' ); ?>" type="text" size="36" name="<?php echo $this->get_field_name( 'upload_image' ); ?>" value="<?php echo esc_attr( $upload_image ); ?>" />
+			<input class="upload-img" id="<?php echo $this->get_field_id( 'upload_image' ); ?>" type="text" size="36" name="<?php echo $this->get_field_name( 'upload_image' ); ?>" value="<?php echo esc_attr( $upload_image ); ?>" />
 			<!-- <input id="upload_image_button" type="button" value="Upload Image" /> -->
 		</p>
 		<p>
@@ -120,21 +120,8 @@ class TwoColImgTxt extends WP_Widget {
 // register TwoColImgTxt widget
 function register_TwoColImgTxt() {
     register_widget( 'TwoColImgTxt' );
-    add_action('admin_enqueue_scripts', 'TwoColImgTxt_admin_scripts');
 }
 add_action( 'widgets_init', 'register_TwoColImgTxt' );
 
-
-function TwoColImgTxt_admin_scripts() {
-	wp_enqueue_media();
-	wp_register_script('TwoColImgTxt-upload', get_template_directory_uri() . '/assets/functions/widgets/js/twoColImgTxt-widget.js', array('jquery'));
-	wp_enqueue_script('TwoColImgTxt-upload');
-}
-
-
-
-// if (isset($_GET['page']) && $_GET['page'] == 'widget.php') {
-	
-// }
 
 ?>

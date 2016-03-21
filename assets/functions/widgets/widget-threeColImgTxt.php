@@ -148,8 +148,8 @@ class ThreeColImgTxt extends WP_Widget {
 		</p>
 		<p>			
 			<label for="<?php echo $this->get_field_id( 'upload_image1' ); ?>"><?php _e( 'Image 1:' ); ?></label>
-			<span style="background-color:#999; padding:10px; display:block; float:left;"><img src="<?php echo esc_attr( $upload_image1 ); ?>" alt="" style="max-width:300px; width:100%; float:left;"></span>
-			<input id="<?php echo $this->get_field_id( 'upload_image1' ); ?>" type="text" size="36" name="<?php echo $this->get_field_name( 'upload_image1' ); ?>" value="<?php echo esc_attr( $upload_image1 ); ?>" />
+			<span class="spanClass" style="background-color:#999; padding:10px; display:block; float:left;"><img src="<?php echo esc_attr( $upload_image1 ); ?>" alt="" style="max-width:300px; width:100%; float:left;"></span>
+			<input  class="upload-img" id="<?php echo $this->get_field_id( 'upload_image1' ); ?>" type="text" size="36" name="<?php echo $this->get_field_name( 'upload_image1' ); ?>" value="<?php echo esc_attr( $upload_image1 ); ?>" />
 			<!-- <input id="upload_image_button" type="button" value="Upload Image" /> -->
 		</p>
 
@@ -165,8 +165,8 @@ class ThreeColImgTxt extends WP_Widget {
 		</p>
 		<p>			
 			<label for="<?php echo $this->get_field_id( 'upload_image2' ); ?>"><?php _e( 'Image 2:' ); ?></label>
-			<span style="background-color:#999; padding:10px; display:block; float:left;"><img src="<?php echo esc_attr( $upload_image2 ); ?>" alt="" style="max-width:300px; width:100%; float:left;"></span>
-			<input id="<?php echo $this->get_field_id( 'upload_image2' ); ?>" type="text" size="36" name="<?php echo $this->get_field_name( 'upload_image2' ); ?>" value="<?php echo esc_attr( $upload_image2 ); ?>" />
+			<span class="spanClass" style="background-color:#999; padding:10px; display:block; float:left;"><img src="<?php echo esc_attr( $upload_image2 ); ?>" alt="" style="max-width:300px; width:100%; float:left;"></span>
+			<input  class="upload-img" id="<?php echo $this->get_field_id( 'upload_image2' ); ?>" type="text" size="36" name="<?php echo $this->get_field_name( 'upload_image2' ); ?>" value="<?php echo esc_attr( $upload_image2 ); ?>" />
 			<!-- <input id="upload_image_button" type="button" value="Upload Image" /> -->
 		</p>
 		<p>
@@ -180,8 +180,8 @@ class ThreeColImgTxt extends WP_Widget {
 		</p>
 		<p>			
 			<label for="<?php echo $this->get_field_id( 'upload_image3' ); ?>"><?php _e( 'Image 3:' ); ?></label>
-			<span style="background-color:#999; padding:10px; display:block; float:left;"><img src="<?php echo esc_attr( $upload_image3 ); ?>" alt="" style="max-width:300px; width:100%; float:left;"></span>
-			<input id="<?php echo $this->get_field_id( 'upload_image3' ); ?>" type="text" size="36" name="<?php echo $this->get_field_name( 'upload_image3' ); ?>" value="<?php echo esc_attr( $upload_image3 ); ?>" />
+			<span class="spanClass" style="background-color:#999; padding:10px; display:block; float:left;"><img src="<?php echo esc_attr( $upload_image3 ); ?>" alt="" style="max-width:300px; width:100%; float:left;"></span>
+			<input  class="upload-img" id="<?php echo $this->get_field_id( 'upload_image3' ); ?>" type="text" size="36" name="<?php echo $this->get_field_name( 'upload_image3' ); ?>" value="<?php echo esc_attr( $upload_image3 ); ?>" />
 			<!-- <input id="upload_image_button" type="button" value="Upload Image" /> -->
 		</p>
 		<p>
@@ -225,21 +225,10 @@ class ThreeColImgTxt extends WP_Widget {
 // register ThreeColImgTxt widget
 function register_ThreeColImgTxt() {
     register_widget( 'ThreeColImgTxt' );
-    add_action('admin_enqueue_scripts', 'three_admin_scripts');
 }
 add_action( 'widgets_init', 'register_ThreeColImgTxt' );
 
 
-function three_admin_scripts() {
-	wp_enqueue_media();
-	wp_register_script('three-upload', get_template_directory_uri() . '/assets/functions/widgets/js/threeColImgTxt-widget.js', array('jquery'));
-	wp_enqueue_script('three-upload');
-}
 
-
-
-// if (isset($_GET['page']) && $_GET['page'] == 'widget.php') {
-	
-// }
 
 ?>

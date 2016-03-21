@@ -66,5 +66,17 @@ require_once(get_template_directory().'/assets/functions/custom-post-type-apps.p
 	$topbar_menu			=	$origin_theme['switch-topbar-menu'];
 	$menu_box_shadow		=	$origin_theme['opt-select-menu-box-shadow-effect'];
 	$site_sections			=	$origin_theme['opt-layout-sections'];
+
+	
+	define("AR_BADGE", get_template_directory_uri() .'/assets/images/badges/as.png');
+	define("VR_BADGE", get_template_directory_uri() .'/assets/images/badges/vrenabled-40x40.png');
+	define("PLAY_STORE_BADGE", get_template_directory_uri() .'/assets/images/badges/available-on-playstore-40x40.png');
 	
 	
+
+    add_filter('images_cpt','wpaura_image_cpt');
+    function wpaura_image_cpt(){
+        $cpts = array('page','apps');
+        return $cpts;
+    }
+?>

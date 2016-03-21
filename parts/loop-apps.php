@@ -1,4 +1,3 @@
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article">
 
 	<section class="featured-image" itemprop="articleBody">
@@ -11,21 +10,17 @@
 			echo get_field( "app_section" );  
 			$fields = get_fields();
 			if (in_array("Augmented Reality", $fields['aura_app_badges'])) {
-			    echo '<img src="'. get_template_directory_uri() .'/assets/images/badges/as.png">';
+			    echo '<img src="'. AR_BADGE .'">';
 			}
 			if (in_array("Virtual Reality", $fields['aura_app_badges'])) {
-			    echo '<img src="'. get_template_directory_uri() .'/assets/images/badges/vrenabled-40x40.png">';
+			    echo '<img src="'. VR_BADGE .'">';
 			}
 			if (in_array("Play Store", $fields['aura_app_badges'])) {
-			    echo '<img src="'. get_template_directory_uri() .'/assets/images/badges/available-on-playstore-40x40.png">';
+			    echo '<img src="'. PLAY_STORE_BADGE .'">';
 			}
+			
 		?>
 						
 		<?php //get_template_part( 'parts/content', 'byline' ); ?>				
-	</header> <!-- end article header -->	
-					
-	<section class="entry-content" itemprop="articleBody">
-		<?php the_content('<button class="tiny">' . __( 'Read more...', 'auraweb' ) . '</button>'); ?> 
-	</section> <!-- end article section -->
-					    							
+	</header> <!-- end article header -->						    							
 </article> <!-- end article --> 	

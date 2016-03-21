@@ -19,31 +19,29 @@ tejas
 
 	<div id="inner-content">
 
-	    <main id="main" class="large-8 medium-8 columns first" role="main">
+	    <main id="main" class="large-10 medium-10 columns first" role="main">
 	
-		    <header>
-		    	<!-- <h1 class="page-title"><span><?php //_e( 'Posts Categorized:', 'auraweb' ); ?></span> <?php //single_cat_title(); ?></h1> -->
-		    </header>
+		    <section class="row">
+				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			 
+					<!-- To see additional archive styles, visit the /parts directory -->
+					<?php get_template_part( 'parts/loop', 'apps' ); ?>
+				    
+				<?php endwhile; ?>	
 
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		 
-				<!-- To see additional archive styles, visit the /parts directory -->
-				<?php get_template_part( 'parts/loop', 'apps' ); ?>
-			    
-			<?php endwhile; ?>	
-
-				<?php joints_page_navi(); ?>
-				
-			<?php else : ?>
-										
-				<?php get_template_part( 'parts/content', 'missing' ); ?>
+					<?php joints_page_navi(); ?>
 					
-			<?php endif; ?>
+				<?php else : ?>
+											
+					<?php get_template_part( 'parts/content', 'missing' ); ?>
+						
+				<?php endif; ?>
+			</section>			
 
 	    </main> <!-- end #main -->
 
 	    <?php if ( is_active_sidebar( 'apps_page_sidebar' ) ) : ?>
-			<div id="apps-page-sidebar" class="apps-page-sidebar">
+			<div id="apps-page-sidebar" class="apps-page-sidebar large-2 medium-2 columns">
 				<?php dynamic_sidebar( 'apps_page_sidebar' ); ?>
 			</div><!-- #middle-bar-right-sidebar -->
 		<?php endif; ?>
