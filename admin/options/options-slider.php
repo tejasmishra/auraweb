@@ -124,6 +124,62 @@ Redux::setSection( $opt_name, array(
                 'url'         => __( 'Give us a link!', 'origin-theme' ),
             ),
         ),
+
+        array(
+            'id'          => 'apps-main-slides',
+            'type'        => 'slides',
+            'required' => array( 'switch-parent-slider', '=', '1' ),
+            'title'       => __( 'Apps Slides Options', 'origin-theme' ),
+            'subtitle'    => __( 'Unlimited slides with drag and drop sortings.', 'origin-theme' ),
+            'desc'        => __( 'This field will store all slides values into a multidimensional array to use into a foreach loop.', 'origin-theme' ),
+            'placeholder' => array(
+                'title'       => __( 'This is a title', 'origin-theme' ),
+                'description' => __( 'Description Here', 'origin-theme' ),
+                'url'         => __( 'Give us a link!', 'origin-theme' ),
+            ),
+        ),
+
+        array(
+            'id'          => 'arpage-main-slides',
+            'type'        => 'slides',
+            'required' => array( 'switch-parent-slider', '=', '1' ),
+            'title'       => __( 'Augmented Reality Slides', 'origin-theme' ),
+            'subtitle'    => __( 'Unlimited slides with drag and drop sortings.', 'origin-theme' ),
+            'desc'        => __( 'This field will store all slides values into a multidimensional array to use into a foreach loop.', 'origin-theme' ),
+            'placeholder' => array(
+                'title'       => __( 'This is a title', 'origin-theme' ),
+                'description' => __( 'Description Here', 'origin-theme' ),
+                'url'         => __( 'Give us a link!', 'origin-theme' ),
+            ),
+        ),
+
+        array(
+            'id'          => 'vrpage-main-slides',
+            'type'        => 'slides',
+            'required' => array( 'switch-parent-slider', '=', '1' ),
+            'title'       => __( 'Virtual Reality Slides', 'origin-theme' ),
+            'subtitle'    => __( 'Unlimited slides with drag and drop sortings.', 'origin-theme' ),
+            'desc'        => __( 'This field will store all slides values into a multidimensional array to use into a foreach loop.', 'origin-theme' ),
+            'placeholder' => array(
+                'title'       => __( 'This is a title', 'origin-theme' ),
+                'description' => __( 'Description Here', 'origin-theme' ),
+                'url'         => __( 'Give us a link!', 'origin-theme' ),
+            ),
+        ),
+
+        array(
+            'id'          => 'auraschool-main-slides',
+            'type'        => 'slides',
+            'required' => array( 'switch-parent-slider', '=', '1' ),
+            'title'       => __( 'Aura School Slides', 'origin-theme' ),
+            'subtitle'    => __( 'Unlimited slides with drag and drop sortings.', 'origin-theme' ),
+            'desc'        => __( 'This field will store all slides values into a multidimensional array to use into a foreach loop.', 'origin-theme' ),
+            'placeholder' => array(
+                'title'       => __( 'This is a title', 'origin-theme' ),
+                'description' => __( 'Description Here', 'origin-theme' ),
+                'url'         => __( 'Give us a link!', 'origin-theme' ),
+            ),
+        ),
     )
 ) );
 ?>

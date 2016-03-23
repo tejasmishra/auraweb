@@ -2,18 +2,18 @@
 			
 	<div id="content">
 
-		<div id="inner-content" class="row">
+		<div id="inner-content">
 	
-			<main id="main" class="large-8 medium-8 columns" role="main">
+			<main id="main" class="large-9 medium-9 columns" role="main">
 
 				<article id="content-not-found">
 				
 					<header class="article-header">
-						<h1><?php _e( 'Epic 404 - Article Not Found', 'auraweb' ); ?></h1>
+						<h1>Comming soon<?php //_e( 'Epic 404 - Article Not Found', 'auraweb' ); ?></h1>
 					</header> <!-- end article header -->
 			
 					<section class="entry-content">
-						<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'auraweb' ); ?></p>
+						<p><?php //_e( 'The article you were looking for was not found, but maybe try looking again!', 'auraweb' ); ?></p>
 					</section> <!-- end article section -->
 
 					<section class="search">

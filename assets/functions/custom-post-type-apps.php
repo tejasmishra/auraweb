@@ -87,6 +87,29 @@ function custom_post_type_apps() {
     		// 'rewrite' => array( 'slug' => 'app-slug' ),
     	)
     );   
+
+	// now let's add custom categories (these act like categories)
+    register_taxonomy( 'appscatmain', 
+    	array('apps'), /* if you change the name of register_post_type( 'apps', then you have to change this */
+    	array('hierarchical' => true,     /* if this is true, it acts like categories */             
+    		'labels' => array(
+    			'name' => __( 'App Main Categories', 'auraweb' ), /* name of the custom taxonomy */
+    			'singular_name' => __( 'App Main Category', 'auraweb' ), /* single taxonomy name */
+    			'search_items' =>  __( 'Search App Main Categories', 'auraweb' ), /* search title for taxomony */
+    			'all_items' => __( 'All App Main Categories', 'auraweb' ), /* all title for taxonomies */
+    			'parent_item' => __( 'Parent App Main Category', 'auraweb' ), /* parent title for taxonomy */
+    			'parent_item_colon' => __( 'Parent App Main Category:', 'auraweb' ), /* parent taxonomy title */
+    			'edit_item' => __( 'Edit App Main Category', 'auraweb' ), /* edit custom taxonomy title */
+    			'update_item' => __( 'Update App Main Category', 'auraweb' ), /* update title for taxonomy */
+    			'add_new_item' => __( 'Add New App Main Category', 'auraweb' ), /* add new title for taxonomy */
+    			'new_item_name' => __( 'New App Main Category Name', 'auraweb' ) /* name title for taxonomy */
+    		),
+    		'show_admin_column' => true, 
+    		'show_ui' => true,
+    		'query_var' => true,
+    		// 'rewrite' => array( 'slug' => 'app-slug' ),
+    	)
+    );   
     
 	// now let's add custom tags (these act like categories)
     register_taxonomy( 'appstag', 

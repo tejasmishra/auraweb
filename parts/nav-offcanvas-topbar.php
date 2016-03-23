@@ -14,7 +14,7 @@
 	$is_menu;
 
 	$classes = get_body_class();
-	if (in_array('post-type-archive-apps', $classes) || in_array('tax-appscat', $classes) || in_array('single-apps', $classes) ) {
+	if (in_array('post-type-archive-apps', $classes) || in_array('tax-appscat', $classes) || in_array('tax-appscatmain', $classes) || in_array('single-apps', $classes) ) {
 	    $apps_page = true;
 	} else {
 	    $apps_page = false;
@@ -52,6 +52,12 @@
 					<?php require_once(get_template_directory().'/parts/content-logo.php');  ?>
 				</div>
 			<?php endif; ?>
+			<?php if ( is_active_sidebar( 'header_section_after_logo' ) ) : ?>
+				<div id="header-section-after-logo" class="header-section-after-logo widget-area" role="complementary">
+					<?php dynamic_sidebar( 'header_section_after_logo' ); ?>
+				</div><!-- #middle-bar-right-sidebar -->
+			<?php endif; ?>
+			
 			<section class="top-bar-section <?php if ( $logo_location == 'besidesMenu') { echo 'float-right'; } ?>">
 				
 				<?php
@@ -61,6 +67,11 @@
 				?>
 				<?php
 					if ( $apps_page)  {
+						if(is_tax( 'appscatmain' )) {
+							echo '<span class="current_cat_parent"><span class="current_cat">';
+							single_cat_title();
+							echo '</span></span>';
+						}
 						joints_top_nav_apps();
 					}
 				?>

@@ -33,7 +33,7 @@ header.header{padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;}.ma
     }
     
     .top-bar-section li.active:not(.has-form) a:not(.button){
-        color: #7B88CC;
+        color: #ffffff;
     }
     .top-bar-section ul li:hover:not(.has-form) > a, .top-bar-section li.active:not(.has-form) a:not(.button):hover {
         color: #ffffff;

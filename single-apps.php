@@ -17,10 +17,10 @@ single-bookmarks.php
 			
 <div id="content">
 
-	<div id="inner-content">
+	<div id="inner-content-side">
 
-		<main id="main" class="large-10 medium-10 columns" role="main">
-			<section class="row">
+		<main id="main" class="" role="main">
+			<section>
 						
 			    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			
@@ -35,10 +35,20 @@ single-bookmarks.php
 		</main> <!-- end #main -->
 
 		<?php if ( is_active_sidebar( 'apps_page_sidebar' ) ) : ?>
-			<div id="apps-page-sidebar" class="apps-page-sidebar large-2 medium-2 columns">
+			<div id="apps-page-sidebar" class="apps-page-sidebar">
 				<?php dynamic_sidebar( 'apps_page_sidebar' ); ?>
 			</div><!-- #middle-bar-right-sidebar -->
 		<?php endif; ?>
+		
+		<section class="secondary-sidebar">
+			<?php if ( is_active_sidebar( 'apps_single_page_sidebar' ) ) : ?>
+				<div id="apps-single-page-sidebar" class="apps-single-page-sidebar">
+					<?php dynamic_sidebar( 'apps_single_page_sidebar' ); ?>
+				</div><!-- #middle-bar-right-sidebar -->
+			<?php endif; ?>
+		</section>
+
+		
 
 	</div> <!-- end #inner-content -->
 

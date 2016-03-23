@@ -2,9 +2,9 @@
 			
 	<div id="content">
 
-		<div id="inner-content" class="row">
+		<div id="inner-content">
 	
-			<main id="main" class="large-8 medium-8 columns first" role="main">
+			<main id="main" class="large-9 medium-9 columns first" role="main">
 				<header>
 					<h1 class="archive-title"><?php _e( 'Search Results for:', 'auraweb' ); ?> <?php echo esc_attr(get_search_query()); ?></h1>
 				</header>

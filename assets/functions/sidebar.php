@@ -72,8 +72,35 @@ function joints_register_sidebars() {
 	register_sidebar( array(
 		'name'          => 'Homa Page',
 		'id'            => 'homepage_content',
-		'before_widget' => '<div class="homepage_content">',
-		'after_widget'  => '</div>',
+		'before_widget' => '<div id="%1$s" class="homepage_content widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title'  => '<h2 class="rounded">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Augmented Reality Page',
+		'id'            => 'arpage_content',
+		'before_widget' => '<div id="%1$s" class="arpage_content widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title'  => '<h2 class="rounded">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Virtual Reality Page',
+		'id'            => 'vrpage_content',
+		'before_widget' => '<div id="%1$s" class="vrpage_content widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title'  => '<h2 class="rounded">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Aura School Page',
+		'id'            => 'auraschool_content',
+		'before_widget' => '<div id="%1$s" class="auraschool_content widget %2$s">',
+		'after_widget' => '</div>',
 		'before_title'  => '<h2 class="rounded">',
 		'after_title'   => '</h2>',
 	) );
@@ -81,8 +108,8 @@ function joints_register_sidebars() {
 	register_sidebar( array(
 		'name'          => 'Footer',
 		'id'            => 'footer_content',
-		'before_widget' => '<div class="footer_content">',
-		'after_widget'  => '</div>',
+		'before_widget' => '<div id="%1$s" class="footer_content widget %2$s">',
+		'after_widget' => '</div>',
 		'before_title'  => '<h2 class="rounded">',
 		'after_title'   => '</h2>',
 	) );
@@ -90,8 +117,8 @@ function joints_register_sidebars() {
 	register_sidebar( array(
 		'name'          => 'Apps Page Sidebar',
 		'id'            => 'apps_page_sidebar',
-		'before_widget' => '<div class="apps_page_sidebar_content">',
-		'after_widget'  => '</div>',
+		'before_widget' => '<div id="%1$s" class="apps_page_sidebar widget %2$s">',
+		'after_widget' => '</div>',
 		'before_title'  => '<h2 class="rounded">',
 		'after_title'   => '</h2>',
 	) );
@@ -99,8 +126,18 @@ function joints_register_sidebars() {
 	register_sidebar( array(
 		'name'          => 'Apps Single Page Secondary Sidebar',
 		'id'            => 'apps_single_page_sidebar',
-		'before_widget' => '<div class="apps_single_page_sidebar_content">',
-		'after_widget'  => '</div>',
+		'before_widget' => '<div id="%1$s" class="apps_single_page_sidebar widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title'  => '<h2 class="rounded">',
+		'after_title'   => '</h2>',
+	) );
+
+
+	register_sidebar( array(
+		'name'          => 'Header Section After Logo',
+		'id'            => 'header_section_after_logo',
+		'before_widget' => '<div id="%1$s" class="arpage_content widget %2$s">',
+		'after_widget' => '</div>',
 		'before_title'  => '<h2 class="rounded">',
 		'after_title'   => '</h2>',
 	) );

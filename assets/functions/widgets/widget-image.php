@@ -30,7 +30,7 @@ class ImageWidget extends WP_Widget {
 		?>
 		<div class="image-widget">
 			<?php if ( ! empty( $instance['upload_image'] ) ) { ?>		
-				<img src="<?php echo $instance['upload_image'] ?>" alt="" style="max-width:600px; width:100%; ">
+				<img src="<?php echo $instance['upload_image'] ?>" alt="" >
 				<?php
 			} ?>	
 				

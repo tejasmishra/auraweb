@@ -29,47 +29,44 @@ class LatestRecentPost extends WP_Widget {
 		?>
 
 
-		<?php
-
-			if ( ! empty( $instance['numberofpost'] ) ) { 
-				$numberofpost = $instance['numberofpost'];	
-			} 
-
-		?>	
-
-		<span>Latest from our blog</span>
 		
-		<?php
-			$args = array( 
-						'numberposts' => $numberofpost, 
-						'post_type' => 'post',
-						'category' => 'blog',
-						'orderby' => 'post_date',
-    					'order' => 'DESC',
-						'post_status' => 'publish',
-					);
-
-			$recent_posts = wp_get_recent_posts( $args );
-			foreach( $recent_posts as $recent ){
-				echo '<h2>'. ( __($recent["post_title"])) .'</h2>';
-				// print_r($recent_posts);
-				$recent_author = get_user_by( 'ID', $recent["post_author"] );
-				echo $recent_author->display_name . ' wrote on ' . mysql2date('j M Y', $recent["post_date"]) ;
-				echo '<p>';
-				echo ( __($recent["post_content"]));					
-				echo '</p>';
-				// echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   ( __($recent["post_title"])).'</a> </li> ';
-			}
-		?>
-
-		<div class="image-text-widget">
-			<div class="row">
-				
-			</div>
-		</div>
+		<article class="latest-blog-post">
 			
+			<span>Latest from our blog</span>
+			<?php
 
-		
+				if ( ! empty( $instance['numberofpost'] ) ) { 
+					$numberofpost = $instance['numberofpost'];	
+				} 
+
+			?>		
+			<?php
+				$args = array( 
+							'numberposts' => $numberofpost, 
+							'post_type' => 'post',
+							'category' => 'blog',
+							'orderby' => 'post_date',
+	    					'order' => 'DESC',
+							'post_status' => 'publish',
+						);
+
+				$recent_posts = wp_get_recent_posts( $args );
+				foreach( $recent_posts as $recent ){
+					echo '<h2>'. ( __($recent["post_title"])) .'</h2>';
+					// print_r($recent_posts);
+					$recent_author = get_user_by( 'ID', $recent["post_author"] );
+					echo '<span class="author-line">'.$recent_author->display_name . ' wrote on ' . mysql2date('j M Y', $recent["post_date"]).'</span>' ;
+					echo '<p>';
+					echo ( __($recent["post_content"]));					
+					echo '</p>';
+					echo '<a href="'.get_permalink($recent["ID"]).'">Continue Reading</a>';
+					
+					// echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   ( __($recent["post_title"])).'</a> </li> ';
+				}
+			?>
+
+		</article>
+	</div>
 		<?php
 
 		echo $args['after_widget'];
