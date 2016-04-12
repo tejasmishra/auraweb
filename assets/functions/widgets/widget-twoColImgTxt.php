@@ -32,7 +32,7 @@ class TwoColImgTxt extends WP_Widget {
 			<div class="row">
 				<div class="columns large-6">
 						<?php if ( ! empty( $instance['upload_image'] ) ) { ?>		
-							<img src="<?php echo $instance['upload_image'] ?>" alt="" style="max-width:600px; width:100%; ">
+							<img src="<?php echo $instance['upload_image'] ?>" alt="" >
 							<?php
 						} ?>	
 				</div>

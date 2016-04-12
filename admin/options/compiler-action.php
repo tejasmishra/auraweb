@@ -9,6 +9,9 @@ function compiler_action($options, $css, $changed_values) {
         WP_Filesystem();
     }
     
+    $menu_bg_color_small = $options['opt-menubar-background-small']['background-color'];
+    $menu_bg_color_default = $options['opt-menubar-background']['background-color'];
+
     $menu_regular_color = $options['opt-menu-link-color']['regular'];
     $menu_hover_color = $options['opt-menu-link-color']['hover'];
     $menu_active_color = $options['opt-menu-link-color']['active'];
@@ -82,9 +85,13 @@ function compiler_action($options, $css, $changed_values) {
     .top-bar-section ul li > a {
         color: ' . $menu_regular_color . ';
     }
-
     .main-menu-bar .top-bar, .top-bar ul {
-        background-color: '. $options['opt-menubar-background']['background-color'] .';
+        background-color: '. $menu_bg_color_default .';
+    }
+    @media screen and (max-width: 39.9375em) {
+        .top-bar ul {
+            background-color: '. $menu_bg_color_small .';
+        }
     }
 
     .main-menu-bar .top-bar {

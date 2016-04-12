@@ -1,4 +1,4 @@
-header.header{padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;}.mainslider{padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;}h2.site-description-compiler{font-family:Abel;line-height:40px;font-weight:normal;font-style:700;color:#333;font-size:33px;opacity: 1;visibility: visible;-webkit-transition: opacity 0.24s ease-in-out;-moz-transition: opacity 0.24s ease-in-out;transition: opacity 0.24s ease-in-out;}.wf-loading h2.site-description-compiler,{opacity: 0;}.ie.wf-loading h2.site-description-compiler,{visibility: hidden;}.mainslider .slick-list {
+header.header{padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;}.main-menu-bar .top-bar{background-color:#303030;}.hide-for-large .top-bar{background-color:#ffffff;}.mainslider{padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;}h2.site-description-compiler{font-family:Abel;line-height:40px;font-weight:normal;font-style:700;color:#333;font-size:33px;opacity: 1;visibility: visible;-webkit-transition: opacity 0.24s ease-in-out;-moz-transition: opacity 0.24s ease-in-out;transition: opacity 0.24s ease-in-out;}.wf-loading h2.site-description-compiler,{opacity: 0;}.ie.wf-loading h2.site-description-compiler,{visibility: hidden;}.mainslider .slick-list {
             -webkit-border-top-left-radius: 0;
             -webkit-border-top-right-radius: 0;
             -webkit-border-bottom-right-radius: 0;
@@ -42,9 +42,13 @@ header.header{padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;}.ma
     .top-bar-section ul li > a {
         color: #ffffff;
     }
-
     .main-menu-bar .top-bar, .top-bar ul {
-        background-color: #444444;
+        background-color: #303030;
+    }
+    @media screen and (max-width: 39.9375em) {
+        .top-bar ul {
+            background-color: #ffffff;
+        }
     }
 
     .main-menu-bar .top-bar {

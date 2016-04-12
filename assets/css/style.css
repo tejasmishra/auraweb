@@ -1806,7 +1806,7 @@ h4,
 h5,
 h6 {
   font-family: "Roboto", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 100;
   font-style: normal;
   color: inherit;
   text-rendering: optimizeLegibility;
@@ -4660,69 +4660,82 @@ PLUGIN STYLES
 /*********************
 HOMEPAGE STYLES
 *********************/
-.homepage-content {
+.homepage-content, .arpage-content, .vrpage-content, .auraschool-content {
   background-color: white; }
-  .homepage-content .homepage_content.widget_text {
-    font-size: 1.69231rem;
-    line-height: 2.76923rem;
-    color: #777;
-    text-align: center;
-    margin: 0 auto;
-    margin: 0 auto;
-    border: 0px;
-    border-bottom: 1px solid transparent;
-    /* Safari 3.1-5 */
-    /* Opera 11-12.1 */
-    border-image: url(../images/border.png) 1 repeat;
-    padding-left: 100px;
-    padding-right: 100px;
-    width: 80%;
-    padding: 80px 0;
+
+.widget_text {
+  font-size: 1.69231rem;
+  line-height: 2.76923rem;
+  color: #777;
+  text-align: center;
+  margin: 0 auto;
+  margin: 0 auto;
+  border: 0px;
+  border-bottom: 1px solid transparent;
+  /* Safari 3.1-5 */
+  /* Opera 11-12.1 */
+  border-image: url(../images/border.png) 1 repeat;
+  padding-left: 100px;
+  padding-right: 100px;
+  width: 80%;
+  padding: 80px 0;
+  margin: 0 auto; }
+  .widget_text .textwidget {
+    width: 90%;
     margin: 0 auto; }
-    .homepage-content .homepage_content.widget_text .textwidget {
-      width: 90%;
-      margin: 0 auto; }
-  .homepage-content .homepage_content .image-text-widget {
-    margin: 0 auto;
-    border: 0px;
-    border-bottom: 1px solid transparent;
-    /* Safari 3.1-5 */
-    /* Opera 11-12.1 */
-    border-image: url(../images/border.png) 1 repeat;
-    padding: 60px 0;
-    width: 80%; }
-    .homepage-content .homepage_content .image-text-widget h2 {
-      margin-bottom: 20px; }
-    .homepage-content .homepage_content .image-text-widget p {
-      font-size: 16px; }
-  @media screen and (min-width: 40em) {
-    .homepage-content h2 {
-      font-size: 2.8rem; } }
-  .homepage-content .widget_threecolimgtxt .main-header {
-    text-align: center; }
-    .homepage-content .widget_threecolimgtxt .main-header h2 + p {
-      color: #888;
-      margin-bottom: 60px; }
-  .homepage-content .widget_threecolimgtxt .columns {
-    padding: 0; }
-  .homepage-content .widget_threecolimgtxt .section-area {
-    max-width: 300px; }
-  .homepage-content .widget_threecolimgtxt .image-text-widget .row:nth-child(2) {
-    max-width: 899px; }
-  .homepage-content .widget_threecolimgtxt .image-text-widget img {
+
+.image-text-widget {
+  margin: 0 auto;
+  border: 0px;
+  border-bottom: 1px solid transparent;
+  /* Safari 3.1-5 */
+  /* Opera 11-12.1 */
+  border-image: url(../images/border.png) 1 repeat;
+  padding: 60px 0;
+  width: 80%; }
+  .image-text-widget h2 {
     margin-bottom: 20px; }
-  .homepage-content .widget_threecolimgtxt .image-text-widget .section-area {
-    text-align: center; }
-    .homepage-content .widget_threecolimgtxt .image-text-widget .section-area h2 {
-      font-size: 28px;
-      color: #333; }
-      .homepage-content .widget_threecolimgtxt .image-text-widget .section-area h2 + p {
-        font-size: 14px;
-        padding: 0 15px;
-        position: relative; }
-    .homepage-content .widget_threecolimgtxt .image-text-widget .section-area a {
-      font-size: 16px;
-      font-weight: normal; }
+  .image-text-widget p {
+    font-size: 16px;
+    color: #666; }
+  .image-text-widget img {
+    width: 80%;
+    margin: auto; }
+
+@media screen and (min-width: 40em) {
+  h2 {
+    font-size: 2.8rem; } }
+
+.widget_threecolimgtxt .main-header {
+  text-align: center; }
+  .widget_threecolimgtxt .main-header h2 + p {
+    color: #888;
+    margin-bottom: 60px; }
+
+.widget_threecolimgtxt .columns {
+  padding: 0; }
+
+.widget_threecolimgtxt .section-area {
+  max-width: 300px; }
+
+.widget_threecolimgtxt .image-text-widget .row:nth-child(2) {
+  max-width: 899px; }
+
+.widget_threecolimgtxt .image-text-widget img {
+  margin-bottom: 20px; }
+
+.widget_threecolimgtxt .image-text-widget .section-area {
+  text-align: center; }
+  .widget_threecolimgtxt .image-text-widget .section-area h2 {
+    font-size: 28px;
+    color: #333; }
+    .widget_threecolimgtxt .image-text-widget .section-area h2 + p {
+      font-size: 14px;
+      padding: 0 15px;
+      position: relative; }
+  .widget_threecolimgtxt .image-text-widget .section-area a {
+    font-size: 16px;
+    font-weight: normal; }
 
 #main .widget_latestrecentpost {
   margin: 0 auto;
@@ -4750,21 +4763,6 @@ HOMEPAGE STYLES
     margin: 30px auto 10px;
     font-size: 14px;
     line-height: 24px; }
-
-.arpage_content .textwidget, .vrpage_content .textwidget, .auraschool_content .textwidget {
-  font-size: 1.69231rem;
-  line-height: 2.76923rem;
-  color: #777;
-  text-align: center;
-  margin: 0 auto;
-  margin: 0 auto;
-  border: 0px;
-  border-bottom: 1px solid transparent;
-  /* Safari 3.1-5 */
-  /* Opera 11-12.1 */
-  border-image: url(../images/border.png) 1 repeat;
-  padding-left: 100px;
-  padding-right: 100px; }
 
 main.column, main.columns, main.columns {
   float: right; }
@@ -5269,6 +5267,175 @@ main.column, main.columns, main.columns {
   box-shadow: none;
   border-radius: 4px;
   margin: 9px 0 9px 43px; }
+
+@media screen and (max-width: 39.9375em) {
+  .main-menu-bar .top-bar, .top-bar ul {
+    background-color: white; } }
+
+#text-4.arpage_content,
+#text-7.vrpage_content,
+#text-10.auraschool_content,
+#text-5.arpage_content,
+#text-8.vrpage_content,
+#text-11.auraschool_content {
+  border: none;
+  background-color: #9BC04C;
+  color: white;
+  width: 100%; }
+
+#text-7.vrpage_content {
+  background-color: #47B1C9; }
+
+#text-10.auraschool_content {
+  background-color: #F9AE99; }
+
+#text-5.arpage_content,
+#text-8.vrpage_content,
+#text-11.auraschool_content {
+  background-color: #444;
+  padding: 50px 0; }
+  #text-5.arpage_content .textwidget,
+  #text-8.vrpage_content .textwidget,
+  #text-11.auraschool_content .textwidget {
+    margin-top: 30px; }
+    #text-5.arpage_content .textwidget a,
+    #text-8.vrpage_content .textwidget a,
+    #text-11.auraschool_content .textwidget a {
+      font-size: 18px;
+      background-color: #9BC04C; }
+
+#text-8.vrpage_content .textwidget a {
+  background-color: #47B1C9; }
+
+#text-11.auraschool_content .textwidget a {
+  background-color: #F9AE99; }
+
+#twocolimgtxt-3.arpage_content .image-text-widget {
+  border: none; }
+
+@media screen and (max-width: 63.9375em) {
+  .widget_text {
+    width: 100%;
+    padding: 20px 15px; }
+    .widget_text .textwidget {
+      margin: 0 auto;
+      font-size: 80%;
+      text-align: left;
+      line-height: 30px; }
+      .widget_text .textwidget strong {
+        font-size: 130%;
+        display: block;
+        padding-bottom: 15px; }
+  .slick-slider {
+    margin-bottom: 0; }
+  .image-text-widget {
+    width: 90%; }
+    .image-text-widget img {
+      width: 100%; }
+    .image-text-widget h2 {
+      display: none; }
+    .image-text-widget .large-6:first-child {
+      text-align: center;
+      margin-bottom: 20px; }
+    .image-text-widget p {
+      font-size: 18px; }
+  #main .widget_latestrecentpost {
+    text-align: left;
+    padding: 0 30px 20px; }
+    #main .widget_latestrecentpost span:not(.author-line) {
+      display: none; }
+    #main .widget_latestrecentpost h2 {
+      width: 100%;
+      margin-bottom: 0;
+      position: absolute;
+      left: 145px; }
+    #main .widget_latestrecentpost .author-line {
+      font-size: 170%;
+      width: 100px;
+      word-wrap: break-word;
+      display: inline-block;
+      background-color: #444;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      float: left;
+      margin-right: 15px; }
+      #main .widget_latestrecentpost .author-line span {
+        display: none; }
+      #main .widget_latestrecentpost .author-line + p {
+        margin-top: 30px;
+        padding-top: 30px;
+        overflow: hidden;
+        max-height: 90px;
+        font-size: 18px;
+        line-height: 28px; }
+  .widget_threecolimgtxt .image-text-widget {
+    padding: 30px 0; }
+    .widget_threecolimgtxt .image-text-widget h2 {
+      display: block; }
+      .widget_threecolimgtxt .image-text-widget h2 + p {
+        margin-bottom: 20px; }
+    .widget_threecolimgtxt .image-text-widget .section-area {
+      text-align: left;
+      max-width: 100%;
+      position: relative;
+      margin-bottom: 20px; }
+      .widget_threecolimgtxt .image-text-widget .section-area img {
+        max-width: 150px;
+        float: left;
+        margin: 0;
+        padding-right: 15px; }
+      .widget_threecolimgtxt .image-text-widget .section-area h2 {
+        overflow: hidden;
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 6px; }
+        .widget_threecolimgtxt .image-text-widget .section-area h2 + p {
+          overflow: hidden;
+          padding: 0;
+          font-size: 18px; }
+      .widget_threecolimgtxt .image-text-widget .section-area a {
+        font-size: 0;
+        width: 100%;
+        height: 112px;
+        position: absolute;
+        top: 0; }
+  .widget_threecolimgtxt .main-header {
+    text-align: left; }
+  .footer .image-widget img {
+    max-width: 210px; }
+  .source-org.copyright {
+    text-align: center;
+    font-size: 14px; }
+  .footer-content .widget_imagewidget:first-child {
+    margin-right: 0;
+    padding: 3px 15px; }
+  .footer-content .widget_imagewidget + .footer_content.widget_nav_menu {
+    display: none; }
+  .footer-content .widget .menu > li > a {
+    font-size: 24px;
+    padding: 5px 10px; }
+  #text-5.arpage_content,
+  #text-8.vrpage_content,
+  #text-11.auraschool_content {
+    padding: 10px 0; }
+    #text-5.arpage_content h2,
+    #text-8.vrpage_content h2,
+    #text-11.auraschool_content h2 {
+      font-size: 32px; }
+    #text-5.arpage_content .textwidget,
+    #text-8.vrpage_content .textwidget,
+    #text-11.auraschool_content .textwidget {
+      text-align: center;
+      margin-top: 20px; }
+  #text-4.arpage_content,
+  #text-7.vrpage_content,
+  #text-10.auraschool_content {
+    padding: 10px 0; }
+    #text-4.arpage_content h2,
+    #text-7.vrpage_content h2,
+    #text-10.auraschool_content h2 {
+      font-size: 32px; } }
 
 /******************************************************************
 

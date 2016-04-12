@@ -103,7 +103,7 @@ $block-grid-max: 8;
 // ------------------
 
 $header-font-family: $body-font-family;
-$header-font-weight: $global-weight-normal;
+$header-font-weight: $global-weight-normal - 200;
 $header-font-style: normal;
 $font-family-monospace: 'Roboto',Consolas, 'Liberation Mono', Courier, monospace;
 $header-sizes: (

@@ -24,7 +24,7 @@
 
 
 <?php if ( $logo_location == 'aboveMenu' || is_active_sidebar( 'middle_bar_right_section' )) : ?>
-	<div class="show-for-medium-up contain-to-grid middle-bar">
+	<div class="show-for-medium contain-to-grid middle-bar">
 		<nav class="top-bar" data-topbar>
 			<?php if($is_logo_set && ($logo_location == 'aboveMenu')){ ?>
 				<div class="float-left">
@@ -45,7 +45,7 @@
 
 
 <?php if ( $is_menu ) : ?>
-	<div class="show-for-medium-up <?php if ($menu_box_shadow != 'none') { echo $menu_box_shadow; } if ($menubar_width == 'fixedWidth') { echo ' row '; } ?> main-menu-bar">
+	<div class="show-for-medium  <?php if ($menu_box_shadow != 'none') { echo $menu_box_shadow; } if ($menubar_width == 'fixedWidth') { echo ' row '; } ?> main-menu-bar">
 		<nav class="top-bar" data-topbar>
 			<?php if ( $logo_location == 'besidesMenu') : ?>
 				<div class="float-left">
@@ -84,3 +84,7 @@
 		</nav>
 	</div>
 <?php endif; ?>
+
+<div class="hide-for-large">
+	<?php get_template_part( 'parts/nav', 'offcanvas' ); ?>
+</div>

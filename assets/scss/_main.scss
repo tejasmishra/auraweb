@@ -934,12 +934,11 @@ HOMEPAGE STYLES
 
 }
 
-.homepage-content {
+.homepage-content, .arpage-content, .vrpage-content, .auraschool-content {
 	// border-bottom:dashed 1px #000000;
 	background-color: white;
-	
-	.homepage_content {
-		&.widget_text {
+}
+		.widget_text {
 			@include center-text-widget;
 			width: 80%;
 			padding: 80px 0;
@@ -959,9 +958,13 @@ HOMEPAGE STYLES
 			}
 			p {
 				font-size: 16px;
+				color: #666;
+			}
+			img {
+				width: 80%;
+				margin: auto;
 			}
 		}
-	}
 
 	@media screen and (min-width: 40em) {
 		h2 {
@@ -1013,7 +1016,6 @@ HOMEPAGE STYLES
 	}
 	
 	
-}
 #main {
 	.widget_latestrecentpost {
 		@include dashed-border-bottom;
@@ -1044,11 +1046,7 @@ HOMEPAGE STYLES
 }
 
 
-.arpage_content, .vrpage_content, .auraschool_content {
-	.textwidget {
-		@include center-text-widget;
-	}
-} 
+
  
 
 
@@ -1705,3 +1703,230 @@ main {
 	    margin: 9px 0 9px 43px;
 	}
 }
+
+@media #{$small-only} {
+	.main-menu-bar .top-bar, .top-bar ul {
+		background-color: white;
+	}
+}
+
+
+#text-4.arpage_content,
+#text-7.vrpage_content,
+#text-10.auraschool_content,
+#text-5.arpage_content,
+#text-8.vrpage_content, 
+#text-11.auraschool_content {
+	border: none;
+	background-color: #9BC04C;
+	color: white;
+	width: 100%;
+}
+#text-7.vrpage_content {
+	background-color: #47B1C9;
+}
+#text-10.auraschool_content {
+	background-color: #F9AE99;
+}
+#text-5.arpage_content,
+#text-8.vrpage_content,
+#text-11.auraschool_content {
+	background-color: #444;
+	padding: 50px 0;
+	.textwidget {
+		margin-top: 30px;
+		a {
+			font-size: 18px;
+			background-color:  #9BC04C;
+		}
+	}
+}
+#text-8.vrpage_content {
+	.textwidget {
+		a {
+			background-color: #47B1C9;
+		}
+	}
+}
+#text-11.auraschool_content {
+	.textwidget {
+		a {
+			background-color: #F9AE99;
+		}
+	}
+}
+#twocolimgtxt-3.arpage_content {
+	.image-text-widget {
+		border: none;
+	}
+}
+
+@include breakpoint(medium down) {
+	.widget_text {
+		width: 100%;
+		padding: 20px 15px;
+		.textwidget {
+		    margin: 0 auto;
+		    font-size: 80%;
+		    text-align: left;
+		    line-height: 30px;
+		    strong {
+		    	font-size: 130%;
+		    	display: block;
+		    	// text-align: center;
+		    	padding-bottom: 15px;
+		    }
+		}
+	}
+	.slick-slider {
+		margin-bottom: 0;
+	}
+	.image-text-widget {
+		width: 90%;
+		img {
+			width: 100%;
+		}
+		h2 {
+			display: none;
+		}
+		.large-6:first-child {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		p {
+			font-size: 18px;
+		}
+	}
+
+	#main .widget_latestrecentpost {
+		span:not(.author-line) {
+			display: none;
+		}
+		text-align: left;
+		padding: 0 30px 20px;
+		h2 {
+		    width: 100%;
+		    margin-bottom: 0;
+		    position: absolute;
+		    left: 145px;
+		}
+		.author-line {
+
+			span {
+				display: none;
+			}
+			font-size: 170%;
+		    width: 100px;
+		    word-wrap: break-word;
+		    display: inline-block;
+		    background-color: #444;
+		    color: white;
+		    text-align: center;
+		    padding: 10px;
+		    float: left;
+		    margin-right: 15px;
+		    + p {
+		    	margin-top: 30px;
+		    	padding-top: 30px;
+			    overflow: hidden;
+			    max-height: 90px;
+			    font-size: 18px;
+			    line-height: 28px;
+		    }
+		}
+	}
+
+
+	.widget_threecolimgtxt {
+		.image-text-widget {
+			padding: 30px 0;
+			h2 {
+				display: block;
+				+ p {
+					margin-bottom: 20px;
+				}
+			}
+			.section-area {
+				text-align: left;
+				max-width: 100%;
+				position: relative;
+				margin-bottom: 20px;
+				img {
+					max-width: 150px;
+					float: left;
+					margin: 0;
+					padding-right: 15px;					
+				}
+				h2 {
+					overflow: hidden;
+					font-size: 20px;
+					font-weight: 500;
+					margin-bottom: 6px;
+					+ p {
+						overflow: hidden;
+						padding: 0;
+						font-size: 18px;
+					} 
+				} 
+				
+				a {
+					font-size: 0;
+				    width: 100%;
+				    height: 112px;
+				    position: absolute;
+				    top: 0;
+				}
+			}
+		}
+		.main-header {
+			text-align: left;
+		}
+
+	} 
+	.footer .image-widget img {
+		max-width: 210px;
+	}
+	.source-org.copyright {
+		text-align: center;
+		font-size: 14px;
+	}
+	.footer-content {
+
+		.widget_imagewidget:first-child {
+			margin-right: 0;
+			padding: 3px 15px;
+		}
+		.widget_imagewidget + .footer_content.widget_nav_menu {
+			display: none;
+		}
+		.widget .menu > li > a {
+		    font-size: 24px;
+		    padding: 5px 10px;
+		}
+		
+	}
+
+
+	#text-5.arpage_content,
+	#text-8.vrpage_content,
+	#text-11.auraschool_content {
+		padding: 10px 0;
+		h2 {
+			font-size: 32px;
+		}
+		.textwidget {
+			text-align: center;
+			margin-top: 20px;
+		}
+	}
+	#text-4.arpage_content,
+	#text-7.vrpage_content,
+	#text-10.auraschool_content {
+		padding: 10px 0;
+		h2 {
+			font-size: 32px;  
+		}
+	}
+
+}
+	

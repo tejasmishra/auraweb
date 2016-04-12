@@ -48,7 +48,7 @@ class ThreeColImgTxt extends WP_Widget {
 			<div class="row">
 				<div class="columns large-4 section-area">
 						<?php if ( ! empty( $instance['upload_image1'] ) ) { ?>		
-							<img src="<?php echo $instance['upload_image1'] ?>" alt="" style="max-width:600px; width:100%; ">
+							<img src="<?php echo $instance['upload_image1'] ?>" alt="" >
 							<?php
 						} ?>	
 						<?php
@@ -70,7 +70,7 @@ class ThreeColImgTxt extends WP_Widget {
 				</div>
 				<div class="columns large-4 section-area">
 						<?php if ( ! empty( $instance['upload_image2'] ) ) { ?>		
-							<img src="<?php echo $instance['upload_image2'] ?>" alt="" style="max-width:600px; width:100%; ">
+							<img src="<?php echo $instance['upload_image2'] ?>" alt="" >
 							<?php
 						} ?>	
 						<?php
@@ -94,7 +94,7 @@ class ThreeColImgTxt extends WP_Widget {
 				</div>
 				<div class="columns large-4 section-area">
 						<?php if ( ! empty( $instance['upload_image3'] ) ) { ?>		
-							<img src="<?php echo $instance['upload_image3'] ?>" alt="" style="max-width:600px; width:100%; ">
+							<img src="<?php echo $instance['upload_image3'] ?>" alt="" >
 							<?php
 						} ?>	
 						<?php

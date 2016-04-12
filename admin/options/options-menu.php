@@ -114,9 +114,21 @@ Redux::setSection( $opt_name, array(
             'id'       => 'opt-menubar-background',
             'type'     => 'background',
             'required' => array( 'switch-menubar', '=', '1' ),
-            //'compiler' => array('.main-menu-bar .top-bar'),
+            'compiler' => array('.main-menu-bar .top-bar'),
             //'mode'     => 'background',
             'title'    => __('Menubar Background', 'redux-framework-demo'),
+            'subtitle' => __('Pick a background color for the theme (default: #fff).', 'redux-framework-demo'),
+            'default'  => array(
+                'background-color' => '#fff',
+            )
+        ),
+        array(
+            'id'       => 'opt-menubar-background-small',
+            'type'     => 'background',
+            'required' => array( 'switch-menubar', '=', '1' ),
+            'compiler' => array('.hide-for-large .top-bar'),
+            //'mode'     => 'background',
+            'title'    => __('Small Screen Menubar Background', 'redux-framework-demo'),
             'subtitle' => __('Pick a background color for the theme (default: #fff).', 'redux-framework-demo'),
             'default'  => array(
                 'background-color' => '#fff',
