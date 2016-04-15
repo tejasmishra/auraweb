@@ -16,11 +16,6 @@ Template Name: Page Aura School (No Sidebar)
 	                $auraschool_main_slides        = $origin_theme['auraschool-main-slides'];
 	                $auraschool_slide_count        = count($auraschool_main_slides);
 	            ?>
-		    	<div class='mainslider autoplay'>
-                    <?php for($slide=0; $slide < $auraschool_slide_count; $slide++ ) { ?>
-                            <div><img src='<?php echo $auraschool_main_slides[$slide]["image"]; ?>' ?></div>
-                    <?php } ?>
-                </div>
 		    	<?php if ( is_active_sidebar( 'auraschool_content' ) ) : ?>
 					<div id="auraschool-content" class="auraschool-content">
 						<?php dynamic_sidebar( 'auraschool_content' ); ?>

@@ -32,6 +32,7 @@
 		<!-- Mobile Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta class="foundation-mq">
+		<meta name="google-site-verification" content="4yaU0OahL3FnvkA_QEKrQL0FUHWsc2M6UIDoaO-XFOk" />
 		
 		<!-- If Site Icon isn't set in customizer -->
 		<?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) { ?>

@@ -17,4 +17,8 @@ jQuery(document).ready(function() {
 
 	jQuery('.post-hr .article-header .description p').append( '<span class="paragraph-end"></span>' );
 
+	
+	jQuery('.marker-slider').slick();
+	
+
 });

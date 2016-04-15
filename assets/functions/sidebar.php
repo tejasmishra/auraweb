@@ -106,6 +106,33 @@ function joints_register_sidebars() {
 	) );
 
 	register_sidebar( array(
+		'name'          => 'Contact Page',
+		'id'            => 'contactpage_content',
+		'before_widget' => '<div id="%1$s" class="contactpage_content widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title'  => '<h2 class="rounded">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'About Page',
+		'id'            => 'aboutpage_content',
+		'before_widget' => '<div id="%1$s" class="aboutpage_content widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title'  => '<h2 class="rounded">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'SolarAR Page',
+		'id'            => 'solararpage_content',
+		'before_widget' => '<div id="%1$s" class="solararpage_content widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title'  => '<h2 class="rounded">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
 		'name'          => 'Footer',
 		'id'            => 'footer_content',
 		'before_widget' => '<div id="%1$s" class="footer_content widget %2$s">',

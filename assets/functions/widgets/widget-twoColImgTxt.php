@@ -108,7 +108,7 @@ class TwoColImgTxt extends WP_Widget {
 		$instance = array();
 		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
 		$instance['upload_image'] = ( ! empty( $new_instance['upload_image'] ) ) ? $new_instance['upload_image'] : '';
-		$instance['description'] = ( ! empty( $new_instance['description'] ) ) ? strip_tags( $new_instance['description'] ) : '';
+		$instance['description'] = ( ! empty( $new_instance['description'] ) ) ? $new_instance['description'] : '';
 
 		return $instance;
 	}

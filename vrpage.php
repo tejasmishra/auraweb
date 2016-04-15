@@ -16,11 +16,6 @@ Template Name: Page Virtual Reality (No Sidebar)
 	                $vr_main_slides        = $origin_theme['vrpage-main-slides'];
 	                $vr_slide_count        = count($vr_main_slides);
 	            ?>
-		    	<div class='mainslider autoplay'>
-                    <?php for($slide=0; $slide < $vr_slide_count; $slide++ ) { ?>
-                            <div><img src='<?php echo $vr_main_slides[$slide]["image"]; ?>' ?></div>
-                    <?php } ?>
-                </div>
 		    	<?php if ( is_active_sidebar( 'vrpage_content' ) ) : ?>
 					<div id="vrpage-content" class="vrpage-content">
 						<?php dynamic_sidebar( 'vrpage_content' ); ?>

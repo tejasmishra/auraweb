@@ -180,6 +180,22 @@ Redux::setSection( $opt_name, array(
                 'url'         => __( 'Give us a link!', 'origin-theme' ),
             ),
         ),
+
+
+
+        array(
+            'id'          => 'solarar-markers-slides',
+            'type'        => 'slides',
+            'required' => array( 'switch-parent-slider', '=', '1' ),
+            'title'       => __( 'SolarAR Markers Slides', 'origin-theme' ),
+            'subtitle'    => __( 'Unlimited slides with drag and drop sortings.', 'origin-theme' ),
+            'desc'        => __( 'This field will store all slides values into a multidimensional array to use into a foreach loop.', 'origin-theme' ),
+            'placeholder' => array(
+                'title'       => __( 'This is a title', 'origin-theme' ),
+                'description' => __( 'Description Here', 'origin-theme' ),
+                'url'         => __( 'Give us a link!', 'origin-theme' ),
+            ),
+        ),
     )
 ) );
 ?>

@@ -4646,6 +4646,8 @@ FOOTER STYLES
 *********************/
 .footer {
   clear: both; }
+  .footer .sub-menu {
+    display: none; }
 
 /*********************
 FOUNDATION STYLES
@@ -4660,29 +4662,28 @@ PLUGIN STYLES
 /*********************
 HOMEPAGE STYLES
 *********************/
-.homepage-content, .arpage-content, .vrpage-content, .auraschool-content {
+.homepage-content, .arpage-content, .vrpage-content, .auraschool-content, .solararpage-content {
   background-color: white; }
-
-.widget_text {
-  font-size: 1.69231rem;
-  line-height: 2.76923rem;
-  color: #777;
-  text-align: center;
-  margin: 0 auto;
-  margin: 0 auto;
-  border: 0px;
-  border-bottom: 1px solid transparent;
-  /* Safari 3.1-5 */
-  /* Opera 11-12.1 */
-  border-image: url(../images/border.png) 1 repeat;
-  padding-left: 100px;
-  padding-right: 100px;
-  width: 80%;
-  padding: 80px 0;
-  margin: 0 auto; }
-  .widget_text .textwidget {
-    width: 90%;
-    margin: 0 auto; }
+  .homepage-content .widget_text, .arpage-content .widget_text, .vrpage-content .widget_text, .auraschool-content .widget_text, .solararpage-content .widget_text {
+    font-size: 1.69231rem;
+    line-height: 2.76923rem;
+    color: #777;
+    text-align: center;
+    margin: 0 auto;
+    margin: 0 auto;
+    border: 0px;
+    border-bottom: 1px solid transparent;
+    /* Safari 3.1-5 */
+    /* Opera 11-12.1 */
+    border-image: url(../images/border.png) 1 repeat;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin: 0 auto;
+    width: 80%;
+    padding: 60px 0; }
+    .homepage-content .widget_text .textwidget, .arpage-content .widget_text .textwidget, .vrpage-content .widget_text .textwidget, .auraschool-content .widget_text .textwidget, .solararpage-content .widget_text .textwidget {
+      width: 90%;
+      margin: 0 auto; }
 
 .image-text-widget {
   margin: 0 auto;
@@ -4785,14 +4786,14 @@ main.column, main.columns, main.columns {
   border-bottom: 3px solid #fff; }
 
 .medium-horizontal.menu > li > a {
-  padding: 17px 1.2rem; }
+  padding: 16px 1.2rem 17px; }
 
 @media screen and (min-width: 40em) {
   .dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent > a::after {
     border-color: #CCCCCC transparent transparent; } }
 
 .site-logo {
-  padding: 10px; }
+  padding: 9px; }
 
 .top-bar {
   padding: 0; }
@@ -5282,6 +5283,13 @@ main.column, main.columns, main.columns {
   background-color: #9BC04C;
   color: white;
   width: 100%; }
+  #text-4.arpage_content h2,
+  #text-7.vrpage_content h2,
+  #text-10.auraschool_content h2,
+  #text-5.arpage_content h2,
+  #text-8.vrpage_content h2,
+  #text-11.auraschool_content h2 {
+    padding: 0 40px; }
 
 #text-7.vrpage_content {
   background-color: #47B1C9; }
@@ -5313,6 +5321,87 @@ main.column, main.columns, main.columns {
 #twocolimgtxt-3.arpage_content .image-text-widget {
   border: none; }
 
+.aboutpage-content, .contactpage-content {
+  background-color: white; }
+  .aboutpage-content .widget_text h2, .contactpage-content .widget_text h2 {
+    background-color: #FFA700;
+    color: white;
+    text-align: center;
+    padding: 80px 0 40px;
+    font-size: 4em; }
+  .aboutpage-content .textwidget, .contactpage-content .textwidget {
+    margin: 50px auto;
+    max-width: 780px;
+    text-align: center; }
+  .aboutpage-content .widget_text p, .contactpage-content .widget_text p {
+    font-size: 1.4em;
+    text-align: justify;
+    color: #777; }
+
+.contactpage-content {
+  padding-bottom: 50px; }
+  .contactpage-content .widget_text h2 {
+    background-color: #BA68C8; }
+
+.social-section {
+  margin-top: 30px;
+  width: 80%; }
+  .social-section + .last-section {
+    width: 80%;
+    margin-bottom: 20px; }
+    .social-section + .last-section p {
+      font-size: 1.2em;
+      color: #777; }
+
+.marker-slider.slick-slider {
+  max-width: 230px;
+  margin: 0 auto;
+  text-align: center; }
+
+.slick-prev:before, .slick-next:before {
+  font-family: fontAwesome;
+  color: white;
+  width: 30px;
+  display: block;
+  font-size: 30px;
+  height: 30px;
+  border: 1px solid;
+  border-radius: 20px;
+  line-height: 27px;
+  background-color: #1583cc;
+  letter-spacing: -2px; }
+
+.slick-next::before {
+  content: ""; }
+
+.slick-next {
+  right: -60px; }
+
+.slick-prev:before {
+  content: "";
+  letter-spacing: 2px; }
+
+.slick-prev {
+  left: -60px; }
+
+div.wpcf7 {
+  margin: 60px auto 20px;
+  padding: 0;
+  max-width: 600px; }
+  div.wpcf7 p {
+    font-size: 18px; }
+    div.wpcf7 p input, div.wpcf7 p textarea {
+      margin-top: 6px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-shadow: none; }
+    div.wpcf7 p input[type="submit"] {
+      padding: 10px 25px;
+      font-size: 20px;
+      background-color: #1585cf;
+      color: white;
+      border-color: #1585cf; }
+
 @media screen and (max-width: 63.9375em) {
   .widget_text {
     width: 100%;
@@ -5321,11 +5410,17 @@ main.column, main.columns, main.columns {
       margin: 0 auto;
       font-size: 80%;
       text-align: left;
-      line-height: 30px; }
+      line-height: 30px;
+      padding: 0 15px; }
       .widget_text .textwidget strong {
         font-size: 130%;
         display: block;
         padding-bottom: 15px; }
+  .aboutpage-content .widget_text {
+    padding: 0; }
+  .aboutpage-content h2 {
+    font-size: 3em;
+    padding: 20px 40px; }
   .slick-slider {
     margin-bottom: 0; }
   .image-text-widget {
@@ -5436,6 +5531,14 @@ main.column, main.columns, main.columns {
     #text-7.vrpage_content h2,
     #text-10.auraschool_content h2 {
       font-size: 32px; } }
+
+@media screen and (max-width: 39.9375em) {
+  .aboutpage-content h2 {
+    font-size: 2em;
+    padding: 10px 20px; } }
+
+.hide-for-large #top-bar-menu a {
+  color: white; }
 
 /******************************************************************
 

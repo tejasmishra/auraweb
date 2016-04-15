@@ -79,4 +79,7 @@ require_once(get_template_directory().'/assets/functions/custom-post-type-apps.p
         $cpts = array('page','apps');
         return $cpts;
     }
+
+
+
 ?>
