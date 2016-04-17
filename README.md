@@ -1,10 +1,10 @@
-Find out more here: www.auraweb.com  
-Demo: www.auraweb.com/demo
+Find out more here: www.aura-interactive.com  
+Demo: www.aura-interactive.com
 
 Currently using Foundation 6.2.0
 
 ### What is auraweb?
-auraweb is a blank WordPress theme built with Foundation 6, giving you all the power and flexibility you need to build complex, mobile friendly websites without having to start from scratch.
+auraweb is a WordPress theme built with Foundation 6, for Aura Interactive giving you all the power and flexibility you need to build complex, mobile friendly websites without having to start from scratch.
 
 Starting its humble life as a fork of the popular theme Bones, auraweb is now the foundation of thousands of websites across the globe.
 
@@ -26,5 +26,3 @@ You can use whatever you want – seriously. While the Sass version comes with B
 - Using the command line, navigate to your theme directory
 - Run npm install
 - Run gulp to confirm everything is working
-
-[Read more about how Gulp is used with auraweb.](http://auraweb.com/docs/gulp/)
